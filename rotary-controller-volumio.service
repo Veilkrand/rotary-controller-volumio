@@ -1,0 +1,10 @@
+[Unit]
+Description=Rotary Controller for Volumio
+After = volumio.service
+
+[Service]
+ExecStart=/usr/bin/python /home/volumio/rotary-controller-volumio/start.py 
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
